@@ -1,12 +1,13 @@
-<h1 align="center">👋 Hi, I'm Abdul Samad</h1>
-https://https://i.postimg.cc/Kzj4qvvd/keep-the-face-and-natural.jpg
+<div align="center">
+  <img src="https://i.postimg.cc/Kzj4qvvd/keep-the-face-and-natural.jpg" alt="Abdul Samad" width="180" style="border-radius: 50%;">
+  <h1>👋 Hi, I'm Abdul Samad</h1>
 
-
-<p align="center">
-  🎓 <b>Software Engineer</b> <br>
-  💻  <b>Frontend Web Development</b> <br>
-  🚀  <b>HTML, CSS, JavaScript & React</b> <br>
-</p>
+  <p>
+    🎓 <b>Software Engineer</b> <br>
+    💻 <b>Frontend Web Development</b> <br>
+    🚀 <b>HTML, CSS, JavaScript & React</b> <br>
+  </p>
+</div>
 
 ---
 
