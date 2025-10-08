@@ -1,137 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdul Samad | Software Engineer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abdul Samad — Software Engineer</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
+    :root{
+      --bg:#0a0a0a;
+      --panel:#0f0f0f;
+      --accent:#00e6e6;
+      --muted:#bdbdbd;
+      --radius:14px;
     }
-    body {
-      background: #0a0a0a;
-      color: #fff;
-      overflow-x: hidden;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Poppins",system-ui,Segoe UI,Roboto,Arial;
+      background:var(--bg);
+      color:#fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 70px;
-      z-index: 1000;
-      backdrop-filter: blur(10px);
+
+    header{
+      position:fixed;
+      top:0;left:0;right:0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 6%;
+      background:linear-gradient(180deg, rgba(0,0,0,0.65), rgba(0,0,0,0.25));
+      backdrop-filter: blur(6px);
+      z-index:999;
+      border-bottom:1px solid rgba(255,255,255,0.03);
     }
-    header h1 {
-      font-size: 1.5rem;
-      color: #00ffee;
-      letter-spacing: 1px;
+    header .brand{color:var(--accent); font-weight:700; letter-spacing:0.6px}
+    nav a{color:#ddd; text-decoration:none; margin-left:18px; font-size:0.95rem}
+    nav a:hover{color:var(--accent)}
+
+    /* Hero */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:100px 6% 60px;
+      text-align:center;
+      gap:36px;
+      flex-direction:column;
     }
-    header nav a {
-      text-decoration: none;
-      color: #fff;
-      margin: 0 15px;
-      transition: 0.3s;
+    .avatar{
+      width:170px;height:170px;border-radius:50%;
+      border:3px solid rgba(0,230,230,0.12);
+      box-shadow:0 8px 30px rgba(0,0,0,0.6), 0 0 30px rgba(0,230,230,0.03) inset;
+      object-fit:cover;
     }
-    header nav a:hover {
-      color: #00ffee;
+    .name{
+      margin-top:8px;
+      color:var(--accent);
+      font-size:2rem;
+      font-weight:700;
     }
-    .home {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
+    .title{
+      color:var(--muted);
+      font-size:1.05rem;
+      margin-top:6px;
     }
-    .home img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 2px solid #00ffee;
-      margin-bottom: 20px;
+
+    /* Skills */
+    .skills{
+      padding:80px 6%;
+      display:block;
+      text-align:center;
     }
-    .home h1 {
-      font-size: 2.3rem;
-      color: #00ffee;
-      margin-bottom: 10px;
+    .skills h2{color:var(--accent); font-size:1.7rem; margin-bottom:26px}
+    .skill-grid{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:28px;
+      align-items:center;
     }
-    .home h3 {
-      font-size: 1.2rem;
-      color: #ccc;
+    .skill{
+      width:120px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:10px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.02);
+      padding:18px;
+      border-radius:12px;
+      transition:transform .22s ease, box-shadow .22s ease;
     }
-    .skills {
-      padding: 100px 0;
-      text-align: center;
+    .skill:hover{ transform:translateY(-6px); box-shadow:0 14px 40px rgba(0,0,0,0.6)}
+    .skill img{ width:44px; height:44px; display:block; }
+    .skill span{ color:#ddd; font-size:0.95rem }
+
+    /* Contact / footer */
+    footer{
+      padding:40px 6%;
+      text-align:center;
+      color:#9b9b9b;
+      border-top:1px solid rgba(255,255,255,0.02);
     }
-    .skills h2 {
-      font-size: 2rem;
-      color: #00ffee;
-      margin-bottom: 40px;
+
+    /* Responsive */
+    @media (min-width:900px){
+      .hero{flex-direction:row; text-align:left}
+      .hero .left{flex:0 0 48%}
+      .hero .right{flex:0 0 48%}
+      .name{font-size:2.4rem}
     }
-    .skills .icons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-    .skills .icons i {
-      font-size: 3rem;
-      color: #00ffee;
-      transition: 0.3s;
-    }
-    .skills .icons i:hover {
-      color: #fff;
-      transform: scale(1.2);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #000;
-      color: #aaa;
+    @media (max-width:520px){
+      header{padding:12px 4%}
+      .skills .skill{width:110px;padding:14px}
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Abdul Samad</h1>
-    <nav>
+    <div class="brand">Abdul Samad</div>
+    <nav aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="home" id="home">
-    <img src="https://i.postimg.cc/Kzj4qvvd/keep-the-face-and-natural.jpg" alt="Abdul Samad">
-    <h1>👋 Hi, I'm Abdul Samad</h1>
-    <h3>Software Engineer | Frontend Developer</h3>
-  </section>
+  <main>
+    <section id="home" class="hero">
+      <div class="left" style="display:flex;flex-direction:column;align-items:center;">
+        <img class="avatar" src="https://i.postimg.cc/Kzj4qvvd/keep-the-face-and-natural.jpg" alt="Abdul Samad">
+      </div>
 
-  <section class="skills" id="skills">
-    <h2>My Skills</h2>
-    <div class="icons">
-      <i class="fab fa-html5" title="HTML"></i>
-      <i class="fab fa-css3-alt" title="CSS"></i>
-      <i class="fab fa-js" title="JavaScript"></i>
-      <i class="fab fa-python" title="Python (Basics)"></i>
-      <i class="fab fa-java" title="Java (Basics)"></i>
-      <i class="fas fa-comments" title="Communication"></i>
-      <i class="fas fa-users" title="Team Collaboration"></i>
-    </div>
-  </section>
+      <div class="right" style="max-width:720px;">
+        <div class="name">Abdul Samad</div>
+        <div class="title">Software Engineer &nbsp;|&nbsp; Frontend Developer</div>
+        <p style="color:#bdbdbd;margin-top:18px;line-height:1.6;">
+          I build clean, responsive user interfaces and keep improving with every project. Currently focused on HTML, CSS, JavaScript and learning React.
+        </p>
+      </div>
+    </section>
 
-  <footer id="contact">
-    <p>© 2025 Abdul Samad | Built with ❤️ using HTML & CSS</p>
-  </footer>
-</body>
-</html>
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+
+      <div class="skill-grid" role="list">
+        <div class="skill" role="listitem" title="HTML">
+          <img src="https://skillicons.dev/icons?i=html" alt="HTML">
+          <span>HTML</span>
+        </div>
+
+        <div class="skill" role="listitem" title="CSS">
+          <img src="https://skillicons.dev/icons?i=css" alt="CSS">
+          <span>CSS</span>
+        </div>
+
+        <div class="skill" role="listitem" title="JavaScript">
+          <img src="https://skillicons.dev/icons?i=javascript" alt="JavaScript">
+          <span>JavaScript</span>
+        </div>
+
+        <div class="skill" role="listitem" title="Python (Basics)">
+          <img src="https://skillicons.dev/icons?i=python" alt="Python">
+          <span>Python (Basics)</span>
+        </div>
+
+        <div class="skill" role="listitem" title="Java (Basics)">
+          <img src="https://skillicons.dev/icons
