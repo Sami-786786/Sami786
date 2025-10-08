@@ -177,4 +177,31 @@
         </div>
 
         <div class="skill" role="listitem" title="Java (Basics)">
-          <img src="https://skillicons.dev/icons
+          <img src="https://skillicons.dev/icons?i=java" alt="Java">
+          <span>Java (Basics)</span>
+        </div>
+
+        <div class="skill" role="listitem" title="Communication">
+          <img src="https://skillicons.dev/icons?i=communication" alt="Communication" onerror="this.src='https://skillicons.dev/icons?i=chat'">
+          <span>Communication</span>
+        </div>
+
+        <div class="skill" role="listitem" title="Team Collaboration">
+          <img src="https://skillicons.dev/icons?i=git" alt="Team" onerror="this.src='https://skillicons.dev/icons?i=team'">
+          <span>Team Collaboration</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="padding:60px 6%; text-align:center;">
+      <h2 style="color:var(--accent)">Contact</h2>
+      <p style="color:#bfbfbf;margin-top:12px">Email: <a href="mailto:your-email@example.com" style="color:var(--accent);text-decoration:none">your-email@example.com</a> · GitHub: <a href="https://github.com/your-username" style="color:var(--accent);text-decoration:none">github.com/your-username</a></p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Abdul Samad — Built with HTML & CSS
+  </footer>
+
+</body>
+</html>
