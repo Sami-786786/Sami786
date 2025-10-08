@@ -1,4 +1,6 @@
 <h1 align="center">👋 Hi, I'm Abdul Samad</h1>
+https://https://i.postimg.cc/Kzj4qvvd/keep-the-face-and-natural.jpg
+
 
 <p align="center">
   🎓 <b>Software Engineer</b> <br>
