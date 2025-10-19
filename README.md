@@ -83,24 +83,7 @@
       I enjoy building modern, responsive websites using clean and maintainable code.
       Currently exploring JavaScript frameworks and expanding my knowledge in Python and Java.
     </p>
-
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">Python (Basics)</div>
-      <div class="skill">Java (Basics)</div>
-      <div class="skill">Communication</div>
-      <div class="skill">Team Collaboration</div>
-    </div>
-
-    <h2>Contact</h2>
-    <p align="center">
-      <a href="https://github.com/" target="_blank">GitHub</a> |
-      <a href="https://linkedin.com/" target="_blank">LinkedIn</a> |
-      <a href="mailto:abdulsamad@example.com">Email</a>
-    </p>
+    
   </section>
 
   <footer>
